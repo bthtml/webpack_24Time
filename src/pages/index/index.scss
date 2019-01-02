@@ -1,0 +1,12 @@
+$red:red;
+#main {
+  color: black;
+  a {
+    font-weight: bold;
+    &:hover { color: $red; }
+  }
+}
+.hello {
+  color: $red;
+  background:url("images/about_01.png");
+}
