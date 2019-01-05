@@ -97,6 +97,9 @@ p {
     -webkit-box-orient: vertical;
 }
 /**元素定位浮动**/
+.zqui-fixed{
+    position: fixed;
+}
 .zqui-rel{
     position:relative;
 }
@@ -138,4 +141,9 @@ p {
 
 a:hover {
     text-decoration: none;
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    .zqui-fixed-bottom{
+        padding-bottom: 34px;
+    }
 }

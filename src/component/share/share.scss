@@ -1,0 +1,52 @@
+//分享透明背景
+$bgragb:rgba(0,0,0,0.5);
+//分享实体背景
+$boxbg:#fff;
+//分享字体大小
+$font:1.2rem;
+//分享标题字体大小
+$font14:1.4rem;
+//分享标题颜色
+$titleClor:#f60;
+
+
+.share-fixed{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height:auto;
+  z-index: 3333;
+  .main{
+    width: 100%;
+    background-color:$boxbg;
+  }
+  .title{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size:$font14 ;
+    color:$titleClor;
+  }
+  .zqui-item-box{
+    width: 100%;
+    padding-bottom: 1rem;
+    .item{
+      width:25%;
+      text-align: center;
+      cursor: pointer;
+      img{
+        width:50%;
+      }
+      p{
+        font-size: $font;
+      }
+    }
+  }
+}
+.share-bg{
+  top: 0;
+  z-index: 2222;
+  height: 100%;
+  background-color:$bgragb;
+}

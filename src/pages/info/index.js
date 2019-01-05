@@ -8,9 +8,15 @@ import "babel-polyfill";
 import './index.scss';
 
 /**底部组件引用**/
-import '../../component/foot/foot'
+import '../../component/foot/foot.js'
 import '../../component/foot/foot.scss'
 /**底部组件引用-end**/
+
+
+/**分享组件引用**/
+import '../../component/share/share.js'
+import '../../component/share/share.scss'
+/**分享组件引用-end**/
 
 mui.init();
 /**

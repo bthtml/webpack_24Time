@@ -7,7 +7,10 @@
 import "babel-polyfill";
 import './index.scss';
 mui.init();
-
+/**底部组件引用**/
+import '../../component/foot/foot'
+import '../../component/foot/foot.scss'
+/**底部组件引用-end**/
 //测试数据-可删除
 function component() {
     var element = document.createElement('div');
