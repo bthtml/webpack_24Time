@@ -12,7 +12,7 @@ const fs = require("fs");
  * 【遍历某文件下的文件目录】
  *
  * @param {String} path 路径
- * @returns {Array} ["about","index"]
+ * @returns {Array} ["html_template","index"]
  */
 module.exports = function getPath(path){
 	let arr = [];

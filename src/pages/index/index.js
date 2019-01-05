@@ -18,3 +18,17 @@ function component() {
     return element;
 }
 document.body.appendChild(component());
+
+//测试Vue绑定数据-可删除
+new Vue({
+    el: '#myapp',
+    data: {
+        message: 'Hello Vue.js!'
+    }
+})
+
+//测试全局方法-可删除
+var num=0.1 + 0.2;
+console.log(num);
+var getNum=app.toFixed(num);
+console.log(getNum);
