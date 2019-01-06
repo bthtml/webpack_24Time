@@ -1,16 +1,10 @@
 
 /**
- * vue组件
- * 包括底部组件 头部组件 列表组件 分享组件等
- * 可扩展
- * **/
-
-/**
  * 底部组件
  * */
 Vue.component('foothtml', {
     props: ['active'],
-    template: `\t\t<nav class="mui-bar mui-bar-tab">\n` +
+    template: `\t\t<nav class="mui-bar mui-bar-tab zqui-fixed-bottom">\n` +
         `\t\t\t<a  class="mui-tab-item" v-bind:class="[ active == 'index' ? 'mui-active' : '' ]" href="javascript:void(0)" onclick="clicked('index.html')">\n` +
         `\t\t\t\t<span class="mui-icon mui-icon-home"></span>\n`+
         `\t\t\t\t<span class="mui-tab-label">首页</span>\n` +
@@ -26,6 +20,10 @@ Vue.component('foothtml', {
         `\t\t\t<a class="mui-tab-item" v-bind:class="[ active == 'gear' ? 'mui-active' : '' ]"  href="javascript:void(0)" onclick="clicked('gear.html')">\n` +
         `\t\t\t\t<span class="mui-icon mui-icon-gear"></span>\n`+
         `\t\t\t\t<span class="mui-tab-label">设置</span>\n` +
+        `\t\t\t</a>\n` +
+        `\t\t\t<a class="mui-tab-item" v-bind:class="[ active == 'my' ? 'mui-active' : '' ]"  href="javascript:void(0)" onclick="clicked('my.html')">\n` +
+        `\t\t\t\t<span class="mui-icon mui-icon-gear"></span>\n`+
+        `\t\t\t\t<span class="mui-tab-label">我的</span>\n` +
         `\t\t\t</a>\n` +
         `\t\t</nav>`
 });

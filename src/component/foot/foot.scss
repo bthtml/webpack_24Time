@@ -1,3 +1,10 @@
 .foot-main{
   background-color: #fff;
 }
+.mui-bar-tab .mui-tab-item.mui-active{
+  color: #ff5600;
+}
+.mui-bar-tab .mui-tab-item .mui-icon~.mui-tab-label{
+  font-size: 1.1rem;
+  padding-top: 2px;
+}

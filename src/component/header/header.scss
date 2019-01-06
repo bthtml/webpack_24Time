@@ -1,9 +1,6 @@
 
 /*----------------app 头部css-----------------*/
 
-/*统一的颜色背景*/
-$bg-color:#ff7302;
-
 /*返回<的颜色，大小*/
 $back-color: #808085;
 $back-font:2.5rem;
@@ -19,15 +16,7 @@ $sbtn-border:#a8a8a8;
 $sort-font:1.4rem;
 $sort-size:1.1rem;
 $sort-color:#666;
-/*首页头部信息未读背景*/
-$isnew-bg:#ff7302;
-/*首页头部ico颜色，大小*/
-$index-size:1.5rem;
-$index-color:#666;
-/*首页图片border*/
-$index-border:0.8rem;
-/*首页页面边界*/
-$pages-pag:1rem;
+
 .mui-bar{
   height:auto;
   background: #fff;
@@ -101,33 +90,19 @@ $pages-pag:1rem;
         display: none;
         .iconfont{
           font-size: 1.2rem;
-          color: $bg-color;
+          color: #ff5600;
         }
       }
     }
     .zqui-active{
-      color: $bg-color;
+      color: #ff5600;
       .item{
         display:block;
       }
     }
 
   }
-  .zqui-index-header{
-    justify-content: space-between;
-    .iconfont{
-      font-size: $index-size;
-      color: $index-color;
-    }
-    .zqui-isnew{
-      right:1px;
-      top:1px;
-      width:4px;
-      height:4px;
-      border-radius:50%;
-      background-color: $isnew-bg;
-    }
-  }
+
 }
 .search {
   margin-left: 10px;
@@ -154,95 +129,3 @@ $pages-pag:1rem;
 }
 
 /*----------------app 头部css end-----------------*/
-
-/*----------------首页轮播图-----------------*/
-.zqui-slider{
-  width: auto;
-  padding:1rem $pages-pag;
-  img{
-    border-radius:$index-border;
-    overflow: hidden;
-  }
-}
-.mui-slider-indicator{
-  bottom:2px;
-  .mui-indicator{
-    background: #fff;
-    width: 12px;
-    height:2px;
-    border-radius:2px;
-    border: none;
-    box-shadow: none;
-  }
-  .mui-active.mui-indicator{
-    background: $bg-color;
-  }
-}
-
-/*----------------首页轮播图 end-----------------*/
-
-/*----------------首页nav导航-----------------*/
-.zqui-index-nav{
-  justify-content: space-around;
-  text-align: center;
-  align-items: center;
-  width: 100%;
-  .item{
-    width: 20%;
-    img{
-      width:45%;
-    }
-    p{
-      font-size: 1.1rem;
-    }
-  }
-}
-/*----------------首页nav导航 end-----------------*/
-
-.zqui-inde-tooltip{
-  width: auto;
-  height: auto;
-  position: fixed;
-  left: 0;
-  bottom:70px;
-  z-index: 20;
-  border-radius: 20px;
-  background-color:rgba(255,86,0,0.8);
-  .zqui-item-box{
-    width: auto;
-    justify-content: left;
-    align-items: center;
-    .item{
-      font-size: 1rem;
-      color: #fff;
-      line-height: 24px;
-      padding-right:5px;
-    }
-    .item:nth-child(2){
-      padding-right: 10px;
-    }
-    img{
-      width:28px;
-      height:28px;
-      display: block;
-      border-radius: 50%;
-    }
-  }
-
-}
-.animated{
-  animation-duration:2s;
-}
-
-.index-img-box{
-  padding:1rem $pages-pag;
-  img{
-    border-radius:$index-border;
-  }
-}
-
-.index-h2{
-  padding:1rem $pages-pag;
-  font-size: 1.4rem;
-  font-weight: bold;
-}

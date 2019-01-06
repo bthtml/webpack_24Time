@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="fonts/iconfont.css" rel="stylesheet"/>
+    <link href="css/zy.media.min.css" rel="stylesheet"/>
+    <title>发布</title>
+</head>
+<body>
+
+<div id="header">
+    <!--
+        -header用法说明
+        - title：页面标题 当为0时不显示
+        - search：搜索框 当为0时不显示,当大于1的时候显示
+        - title与search不能同时为真，否则只显示title
+        - btn：按钮 当为0时不显示，当为1时显示发布样式，当为2时显示搜索样式
+        - text：当btn为1或者2时使用，按钮的文字对应的修改
+        - sort：是否显示推荐下拉，当为0时显示左返回按钮，当为1时显示推荐
+    -->
+    <headerhtml title="0" search="0" btn="1" text="发表" sort="0"></headerhtml>
+</div>
+
+<div class="mui-content">
+
+    <!-- textarea -->
+   <div class="text-box">
+       <textarea placeholder="说点什么..." class="text" rows="3"></textarea>
+   </div>
+    <!-- 图片选择 -->
+    <div class="zqui-item-box img-main" id="myPrictrue">
+        <div class="item normImg-top" v-if="showVideo=='0'" v-for="(item, index) in pictrue">
+            <div class="normImg">
+                <div class="normbg"><img :src="item" class="touImg"> <div class="cursorXss zqui-abs delectPric" :data-id="index"><i class="iconfont icon-del"></i></div></div>
+            </div>
+        </div>
+        <div class="item-flex" v-if="showVideo=='1'">
+            <div class="zy_media">
+                <video poster="img/test.jpg" data-config='{"mediaTitle": "《疯狂动物城》--腾讯视频"}' id="videoMain">
+                    <source src="img/test.mp4" type="video/mp4">
+                    您的浏览器不支持HTML5视频
+                </video>
+            </div>
+            <div style="display: none"><canvas id="canvas"></canvas></div>
+        </div>
+        <div class="item normImg-top cursorXss" v-if="showVideo=='0'" id="showPopover">
+            <div class="normImg">
+                <div class="normbg item-box">
+                    <i class="iconfont icon-add"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- actionsheet一般从底部弹出，显示一系列可选择的操作按钮 -->
+    <div id="forward" class="mui-popover mui-popover-action mui-popover-bottom">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+                <a href="javascript:void(0)" data-id="1">拍照</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="javascript:void(0)"  data-id="2">选择视频</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="javascript:void(0)"  data-id="3">选择图片</a>
+            </li>
+        </ul>
+        <ul class="mui-table-view zqui-border-top zqui-fixed-bottom">
+            <li class="mui-table-view-cell">
+                <a href="#forward">取消</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+<script src="js/mui.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/event.js"></script>
+</body>
+</html>

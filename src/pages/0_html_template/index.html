@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="fonts/iconfont.css" rel="stylesheet"/>
+    <title></title>
+</head>
+<body>
+
+<div class="mui-content">
+
+
+    <!--测试用例可删除-->
+    <div id="myapp">
+        <p>{{ message }}</p>
+        <ul>
+            <!-- 循环输出数据 -->
+            <li v-for="article in articles">
+                <a :href="article.url"><img :src="article.image" /></a>
+                <p style="cursor: pointer">{{article.title}}</p>
+            </li>
+        </ul>
+    </div>
+
+
+
+</div>
+
+
+<!--
+ -底部模板引用-不是每个页面都需要，
+ -对应的js文件是component/foot
+-->
+<div id="foot" class="foot-main">
+    <foothtml active="new"></foothtml>
+
+
+</div>
+<!--底部模板引用end-->
+
+<!--
+ -分享模板引用-不是每个页面都需要，
+ -对应的js文件是component/share
+-->
+<div id="share">
+    <sharehtml></sharehtml>
+</div>
+<!--分享模板引用end-->
+
+<script src="js/mui.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/event.js"></script>
+</body>
+</html>

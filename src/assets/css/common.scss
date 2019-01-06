@@ -121,6 +121,10 @@ p {
     -webkit-flex:1;
     flex:1;
 }
+.zqui-item-box .item-box{
+  display: flex;
+  align-items: center;
+}
 /**clear 浮动**/
 .zqui-left{
     clear: left;
@@ -142,8 +146,57 @@ p {
 a:hover {
     text-decoration: none;
 }
+
+body{
+    background: #fff;
+}
+.mui-content{
+    padding-top: 44px;
+    padding-bottom: 50px;
+    background: none;
+}
+
+.zqui-border-top{
+    border-top:5px solid #f1f1f1;
+}
+.mui-popover.mui-popover-action .mui-table-view{
+    margin: 0;
+}
+.mui-popover.mui-popover-action .mui-table-view{
+    border-radius:0;
+    font-size: 1.2rem;
+    color:#000;
+}
+.mui-popover .mui-table-view .mui-table-view-cell:first-child, .mui-popover .mui-table-view .mui-table-view-cell:first-child>a:not(.mui-btn){
+    border-radius:0;
+    color:#000;
+}
+.mui-popover.mui-popover-action .mui-table-view .mui-table-view-cell:after{
+    background-color: #f1f1f1;
+}
+
+.mui-table-view:before,.mui-table-view:after{
+    background: none;
+}
+.mui-popover .mui-table-view{
+    background: #fff;
+}
+.mui-popover.mui-popover-action .zqui-border-top .mui-table-view-cell:after{
+    background:none;
+}
+
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
     .zqui-fixed-bottom{
         padding-bottom: 34px;
+    }
+    .zqui-header{
+        padding-top:28px;
+    }
+    .mui-content{
+        padding-top: 72px;
+        padding-bottom:78px;
+    }
+    .zqui-inde-tooltip{
+        bottom:98px!important;
     }
 }

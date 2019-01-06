@@ -1,0 +1,40 @@
+/*统一的颜色背景*/
+$bg-color:#ff7302;
+/*首页图片border*/
+$index-border:0.8rem;
+/*首页页面边界*/
+$pages-pag:1rem;
+
+.shop-list{
+  padding:1rem $pages-pag;
+  img{
+    border-radius:$index-border;
+  }
+  .title{
+    padding-top:8px;
+    font-size:1.3rem;
+    font-weight: bold;
+    color: #333;
+  }
+  .title-small{
+    font-size:1.1rem;
+    color: #8f8f94;
+    padding-bottom: 8px;
+  }
+  label{
+    font-size: 1rem;
+    color: #aaaaaf;
+    padding-right: 0.5rem;
+  }
+  .money{
+    font-size: 1.2rem;
+    color:$bg-color;
+  }
+  .btn{
+    font-size: 1.2rem;
+    background-color:$bg-color;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0.3rem 1.6rem;
+  }
+}

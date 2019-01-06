@@ -111,7 +111,7 @@ module.exports = {
                         loader:'url-loader',
                         options: {
                             name: "images/[name]-[hash:8].[ext]",
-                            limit: 20000, // size <= 20KB
+                            limit:100,
                             publicPath: "",
                         }
                     },

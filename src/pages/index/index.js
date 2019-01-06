@@ -1,37 +1,41 @@
-/*
-*--jq已经全局默认引用，直接使用$即可;
-*--babel-polyfill 支持ES6语法;
-*--index.scss 支持scss;
-*--mui.init() mui框架的初始化;
-*/
+/**
+ *--jq已经全局默认引用，直接使用$即可;
+ *--babel-polyfill 支持ES6语法;
+ *--common.scss 公共css;
+ *--index.scss 支持scss;
+ *--mui.init() mui框架的初始化;
+ */
+
 import "babel-polyfill";
+import '../../assets/css/common.scss';
 import './index.scss';
-mui.init();
+
 /**底部组件引用**/
 import '../../component/foot/foot'
 import '../../component/foot/foot.scss'
 /**底部组件引用-end**/
-//测试数据-可删除
-function component() {
-    var element = document.createElement('div');
-    element.innerHTML = 'Hello';
-    element.classList.add('hello');
-    $('.box').append('--addd');
-    mui.toast('1111');
-    return element;
+
+/**产品推荐组件引用**/
+import '../../component/recommend/recommend'
+import '../../component/recommend/recommend.scss'
+/**产品推荐组件引用-end**/
+
+
+mui.init();
+
+/**
+ * mui所有的HTML5+扩展api在这里面写
+ * */
+var onPlusReady=function () {
+
+};
+/**
+ * 扩展API加载完毕后调用onPlusReady回调函数
+ * */
+var plusAction = new onPlusReady();
+if (window.plus) {
+    plusAction();
+} else {
+    document.addEventListener('plusready', plusAction, false);
 }
-document.body.appendChild(component());
 
-//测试Vue绑定数据-可删除
-new Vue({
-    el: '#myapp',
-    data: {
-        message: 'Hello Vue.js!'
-    }
-})
-
-//测试全局方法-可删除
-var num=0.1 + 0.2;
-console.log(num);
-var getNum=app.toFixed(num);
-console.log(getNum);
